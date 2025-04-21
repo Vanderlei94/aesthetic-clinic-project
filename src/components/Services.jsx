@@ -3,6 +3,10 @@ import styled from 'styled-components'
 const ServicesSection = styled.section`
   background-color: #f4f4f4;
   padding: 60px 20px;
+
+  @media (max-width: 768px) {
+    padding: 40px 10px;
+  }
 `
 
 const ServicesGrid = styled.div`
@@ -11,6 +15,12 @@ const ServicesGrid = styled.div`
   gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    gap: 16px;
+    grid-template-columns: 1fr;
+  }
 `
 
 const Card = styled.div`
@@ -19,25 +29,52 @@ const Card = styled.div`
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+`
+
+const Title = styled.h2`
+  font-size: 2rem;
+  margin-bottom: 32px;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
 `
 
 const Services = () => (
-  <ServicesSection>
-    <ServicesGrid id="services">
-      <Card>
-        <h3>Limpeza de Pele</h3>
-        <p>Revitalize e cuide da sua pele com tratamentos completos.</p>
-      </Card>
-      <Card>
-        <h3>Design de Sobrancelhas</h3>
-        <p>Harmonize o rosto com design de sobrancelhas perfeito.</p>
-      </Card>
-      <Card>
-        <h3>Curso de Estética</h3>
-        <p>Aprenda e se profissionalize com nossos cursos especializados.</p>
-      </Card>
-    </ServicesGrid>
-  </ServicesSection>
-)
+    <ServicesSection id="servicos">
+      <Title>Nossos Serviços</Title>
+      <ServicesGrid>
+        <Card>
+          <h3>Design de Sobrancelhas</h3>
+          <p>Harmonize e valorize seu olhar com técnicas avançadas de design.</p>
+        </Card>
+        <Card>
+          <h3>Micropigmentação</h3>
+          <p>Sobrancelhas perfeitas e naturais com técnicas fio a fio, shadow ou híbrida.</p>
+        </Card>
+        <Card>
+          <h3>Extensão de Cílios</h3>
+          <p>Alongue e destaque seus cílios com volume e naturalidade.</p>
+        </Card>
+        <Card>
+          <h3>Lash Lifting</h3>
+          <p>Curvatura natural e duradoura dos cílios, sem necessidade de extensões.</p>
+        </Card>
+        <Card>
+          <h3>Brow Lamination</h3>
+          <p>Alinhamento e definição dos fios das sobrancelhas para um efeito mais cheio.</p>
+        </Card>
+        <Card>
+          <h3>Cursos Profissionais</h3>
+          <p>Capacitação em design de sobrancelhas, micropigmentação e extensão de cílios.</p>
+        </Card>
+      </ServicesGrid>
+    </ServicesSection>
+  )
 
 export default Services

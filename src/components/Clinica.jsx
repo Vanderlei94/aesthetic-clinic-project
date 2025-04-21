@@ -4,17 +4,61 @@ import Container from '../styles/Container'
 const Section = styled.section`
   background-color: #fff;
   padding: 80px 20px;
+  max-width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 40px 10px;
+  }
 `
+
+const Title = styled.h2`
+  font-size: 2rem;
+  margin-bottom: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
+`
+
+const Text = styled.p`
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+`
+
+const LinkButton = styled.a`
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: #1f1f1f;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #333;
+  }
+
+  @media (max-width: 768px) {
+    padding: 9px 16px;
+    font-size: 0.95rem;
+  }
+`
+
 
 const Clinica = () => (
   <Section id="clinica">
     <Container>
-      <h2>A Clínica</h2>
-      <p>
+      <Title>A Clínica</Title>
+      <Text>
         Nossa clínica estética é referência em cuidados com a pele, bem-estar e autoestima.
         Oferecemos atendimento personalizado e técnicas modernas para resultados incríveis.
-      </p>
-      <a href="#servicos">Conheça nossos serviços</a>
+      </Text>
+      <LinkButton href="#servicos">Conheça nossos serviços</LinkButton>
     </Container>
   </Section>
 )
