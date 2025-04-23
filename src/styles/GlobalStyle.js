@@ -36,16 +36,14 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  body {
+ body {
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.text};
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    width: 100%;
+    transition: background 0.3s, color 0.3s;
   }
-
   a {
-    text-decoration: none;
-    color: inherit;
+    color: ${({ theme }) => theme.primary};
   }
 
   h1, h2, h3 {

@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import Container from '../styles/Container'
 
 const Section = styled.section`
-  background-color: #fff;
   padding: 80px 20px;
-  max-width: 100%;
+  width: 100vw;
+  background: ${({ theme }) => theme.background};
+  scroll-margin-top: 80px;
 
   @media (max-width: 768px) {
     padding: 40px 10px;
@@ -33,14 +34,22 @@ const LinkButton = styled.a`
   display: inline-block;
   padding: 10px 24px;
   background-color: #1f1f1f;
+    border: 2px solid #fff;
   color: #fff;
   border-radius: 4px;
   font-size: 1rem;
-  transition: 0.3s;
+  transition: 
+    color 0.2s,
+    background 0.2s,
+    border-color 0.2s,
+    font-weight 0.2s;;
   text-decoration: none;
 
   &:hover {
-    background-color: #333;
+    color: #111;
+    border-color: #111;
+    font-weight: bold;
+    background-color: #d4af37;
   }
 
   @media (max-width: 768px) {
@@ -48,6 +57,7 @@ const LinkButton = styled.a`
     font-size: 0.95rem;
   }
 `
+
 
 
 const Clinica = () => (

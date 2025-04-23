@@ -80,7 +80,7 @@ const NavItem = styled.li`
     display: block;
     padding: 12px 20px;
     &:hover {
-      color: #ccc;
+      color: #d4af37;
     }
   }
 `
@@ -93,21 +93,22 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-        <Container>
-      <NavContent>
-        <LogoImg src={logo} alt="Logo" />
-        <Logo>Danusa Amorim</Logo>
-        <Hamburger onClick={() => setOpen(!open)}>
-          <span style={{ transform: open ? "rotate(45deg) translateY(10px)" : "none" }} />
-          <span style={{ opacity: open ? 0 : 1 }} />
-          <span style={{ transform: open ? "rotate(-45deg) translateY(-12px)" : "none" }} />
-        </Hamburger>
-        <NavLinks open={open}>
-          <NavItem><a href="#clinica" onClick={handleLinkClick}>A Clínica</a></NavItem>
-          <NavItem><a href="#servicos" onClick={handleLinkClick}>Serviços</a></NavItem>
-          <NavItem><a href="#formacao" onClick={handleLinkClick}>Formação</a></NavItem>
-        </NavLinks>
-      </NavContent>
+      <Container>
+        <NavContent>
+          <LogoImg src={logo} alt="Logo" />
+          <Logo>Danusa Amorim</Logo>
+          <Hamburger onClick={() => setOpen(!open)}>
+            <span style={{ transform: open ? "rotate(45deg) translateY(10px)" : "none" }} />
+            <span style={{ opacity: open ? 0 : 1 }} />
+            <span style={{ transform: open ? "rotate(-45deg) translateY(-12px)" : "none" }} />
+          </Hamburger>
+          <NavLinks open={open}>
+            <NavItem><a href="#hero" onClick={handleLinkClick}>Início</a></NavItem>
+            <NavItem><a href="#clinica" onClick={handleLinkClick}>A Clínica</a></NavItem>
+            <NavItem><a href="#servicos" onClick={handleLinkClick}>Serviços</a></NavItem>
+            <NavItem><a href="#formacao" onClick={handleLinkClick}>Formação</a></NavItem>
+          </NavLinks>
+        </NavContent>
       </Container>
     </NavbarContainer>
   )

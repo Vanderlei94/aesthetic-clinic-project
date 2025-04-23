@@ -2,8 +2,10 @@ import styled from 'styled-components'
 import Container from '../styles/Container'
 
 const Section = styled.section`
-  background: #fff;
   padding: 80px 20px;
+  background: ${({ theme }) => theme.background};
+  scroll-margin-top: 90px;
+  width: 100vw;
 
   @media (max-width: 768px) {
     padding: 40px 10px;
@@ -13,6 +15,7 @@ const Section = styled.section`
 const Title = styled.h2`
   font-size: 2rem;
   margin-bottom: 16px;
+  
 
   @media (max-width: 768px) {
     font-size: 1.3rem;

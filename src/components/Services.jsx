@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
 const ServicesSection = styled.section`
-  background-color: #f4f4f4;
-  padding: 60px 20px;
+  padding: 80px 20px;
+  max-width: 100%;
+  background: ${({ theme }) => theme.background};
+  scroll-margin-top: 80px;
 
   @media (max-width: 768px) {
     padding: 40px 10px;
@@ -20,15 +22,20 @@ const ServicesGrid = styled.div`
   @media (max-width: 768px) {
     gap: 16px;
     grid-template-columns: 1fr;
+    max-width: 100%;
   }
 `
 
 const Card = styled.div`
-  background-color: white;
+  background: ${({ theme }) => theme.cardBg};
+  color: ${({ theme }) => theme.cardText};
+  box-shadow: ${({ theme }) => theme.cardShadow};
   padding: 24px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   text-align: center;
+  &:hover {
+      color: #d4af37;
+    }
 
   @media (max-width: 768px) {
     padding: 16px;
@@ -38,6 +45,7 @@ const Card = styled.div`
 const Title = styled.h2`
   font-size: 2rem;
   margin-bottom: 32px;
+  padding: 0 20px;
 
   @media (max-width: 768px) {
     font-size: 1.3rem;

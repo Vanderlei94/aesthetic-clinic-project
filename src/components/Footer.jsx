@@ -4,8 +4,7 @@ import { FaInstagram, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
 
 const FooterContainer = styled.footer`
   width: 100%;
-  background-color: #1f1f1f;
-  color: white;
+  background: #1f1f1f;
   text-align: center;
   padding: 30px 20px;
   box-sizing: border-box;
@@ -22,23 +21,23 @@ const Links = styled.div`
   a {
     display: inline-block;
     margin: 0 12px;
+    font-size: 2.5rem;
     color: #fff;
-    font-size: 1.3rem;
     transition: color 0.2s;
-    vertical-align: middle;
 
     &:hover {
-      color: #f357a8;
+      color: #d4af37;
     }
   }
 
   @media (max-width: 480px) {
     a {
       margin: 0 6px;
-      font-size: 1.1rem;
+      font-size: 1.8rem;
     }
   }
 `
+const Text = styled.p`color: #fff;`
 
 const Footer = () => (
   <FooterContainer>
@@ -68,7 +67,7 @@ const Footer = () => (
         <FaMapMarkerAlt />
       </a>
     </Links>
-    <p>© 2025 Danusa Amorim Beauty. Todos os direitos reservados.</p>
+    <Text>© 2025 Danusa Amorim Beauty. Todos os direitos reservados.</Text>
   </FooterContainer>
 )
 
