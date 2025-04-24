@@ -1,4 +1,8 @@
 import styled from 'styled-components'
+import AppointmentButton from './buttons/AppointmentButton'
+import sobrancelhaDesignImg from '../assets/design-sobrancelhas.jpg'
+import micropigmentacaoImg from '../assets/pigmentacao-labial.png'
+import extensaoCiliosImg from '../assets/extensao-cilios.jpg'
 
 const ServicesSection = styled.section`
   padding: 80px 20px;
@@ -27,15 +31,32 @@ const ServicesGrid = styled.div`
 `
 
 const Card = styled.div`
-  background: ${({ theme }) => theme.cardBg};
+  background: ${({ theme, $bg }) =>
+    $bg
+      ? `url(${$bg}) center/cover no-repeat, ${theme.cardBg}`
+      : theme.cardBg};
   color: ${({ theme }) => theme.cardText};
   box-shadow: ${({ theme }) => theme.cardShadow};
   padding: 24px;
   border-radius: 8px;
   text-align: center;
-  &:hover {
-      color: #d4af37;
-    }
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: ${({ theme }) => theme.overlay};
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
 
   @media (max-width: 768px) {
     padding: 16px;
@@ -57,29 +78,20 @@ const Services = () => (
     <ServicesSection id="servicos">
       <Title>Nossos Serviços</Title>
       <ServicesGrid>
-        <Card>
+        <Card $bg={sobrancelhaDesignImg}>
           <h3>Design de Sobrancelhas</h3>
           <p>Harmonize e valorize seu olhar com técnicas avançadas de design.</p>
+          <AppointmentButton />
         </Card>
-        <Card>
+        <Card $bg={micropigmentacaoImg}>
           <h3>Micropigmentação</h3>
-          <p>Sobrancelhas perfeitas e naturais com técnicas fio a fio, shadow ou híbrida.</p>
+          <p>Realce o tom e a definição dos seus lábios com um efeito natural e harmonioso.</p>
+          <AppointmentButton />
         </Card>
-        <Card>
+        <Card $bg={extensaoCiliosImg}>
           <h3>Extensão de Cílios</h3>
           <p>Alongue e destaque seus cílios com volume e naturalidade.</p>
-        </Card>
-        <Card>
-          <h3>Lash Lifting</h3>
-          <p>Curvatura natural e duradoura dos cílios, sem necessidade de extensões.</p>
-        </Card>
-        <Card>
-          <h3>Brow Lamination</h3>
-          <p>Alinhamento e definição dos fios das sobrancelhas para um efeito mais cheio.</p>
-        </Card>
-        <Card>
-          <h3>Cursos Profissionais</h3>
-          <p>Capacitação em design de sobrancelhas, micropigmentação e extensão de cílios.</p>
+          <AppointmentButton />
         </Card>
       </ServicesGrid>
     </ServicesSection>

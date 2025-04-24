@@ -104,9 +104,9 @@ const Navbar = () => {
           </Hamburger>
           <NavLinks open={open}>
             <NavItem><a href="#hero" onClick={handleLinkClick}>Início</a></NavItem>
-            <NavItem><a href="#clinica" onClick={handleLinkClick}>A Clínica</a></NavItem>
-            <NavItem><a href="#servicos" onClick={handleLinkClick}>Serviços</a></NavItem>
+            {/* <NavItem><a href="#clinica" onClick={handleLinkClick}>A Clínica</a></NavItem> */}
             <NavItem><a href="#formacao" onClick={handleLinkClick}>Formação</a></NavItem>
+            <NavItem><a href="#servicos" onClick={handleLinkClick}>Serviços</a></NavItem>
           </NavLinks>
         </NavContent>
       </Container>

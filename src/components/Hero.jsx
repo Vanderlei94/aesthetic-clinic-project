@@ -21,7 +21,7 @@ const HeroSection = styled.section`
     content: "";
     position: absolute;
     inset: 0;
-    background: ${({ theme }) => theme.heroOverlay};
+    background: ${({ theme }) => theme.overlay};
     z-index: 1;
   }
 

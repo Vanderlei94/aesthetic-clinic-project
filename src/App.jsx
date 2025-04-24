@@ -20,9 +20,8 @@ function App() {
       <Navbar />
       <div style={{ paddingTop: '80px' }}>
         <Hero />
-        <Clinica />
-        <Services />
         <Formacao />
+        <Services />
         <Footer />
       </div>
       </ThemeProvider>

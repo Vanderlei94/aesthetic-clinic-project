@@ -7,7 +7,7 @@ export const lightTheme = {
     cardBg: "#faf7f0",
     cardText: "#111",
     cardShadow: "0 2px 8px rgba(212, 175, 55, 0.08)", // sombra dourada suave
-    heroOverlay: "rgba(255,255,255,0.35)" // overlay esbranquiçado
+    overlay: "rgba(255,255,255,0.35)" // overlay esbranquiçado
   };
   
   export const darkTheme = {
@@ -18,6 +18,6 @@ export const lightTheme = {
     cardBg: "#181818",
     cardText: "#fff",
     cardShadow: "0 2px 8px rgba(212, 175, 55, 0.13)", // sombra dourada mais visível
-    heroOverlay: "rgba(17,17,17,0.5)" // overlay escuro
+    overlay: "rgba(17,17,17,0.5)" // overlay escuro
   };
   

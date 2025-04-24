@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { FaInstagram, FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaCalendarAlt  } from "react-icons/fa";
 
 
 const FooterContainer = styled.footer`
@@ -41,7 +41,16 @@ const Text = styled.p`color: #fff;`
 
 const Footer = () => (
   <FooterContainer>
+    <Text>Contatos e localização:</Text>
     <Links>
+      <a
+        href="https://online.maapp.com.br/Danusamorimbeauty"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Agendamento Online"
+      >
+        <FaCalendarAlt />
+      </a>  
       <a
         href="https://www.instagram.com/danusamorimbeauty"
         target="_blank"
