@@ -4,9 +4,8 @@ const Button = styled.a`
   display: inline-block;
   padding: 12px 28px;
   background: ${({ theme }) => theme.overlay};
-  border: 2px solid #fff;
   color: ${({ theme }) => theme.text};
-  border-radius: 4px;
+  border-radius: 20px;
   transition:
     color 0.2s,
     background 0.2s,
@@ -15,7 +14,7 @@ const Button = styled.a`
 
   &:hover {
     color: #111;
-    border-color: #111;
+    padding: 15px 35px;
     font-weight: bold;
     background-color: #d4af37;
   }

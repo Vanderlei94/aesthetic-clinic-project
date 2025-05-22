@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import Container from '../styles/Container'
+import SubscribeButton from './buttons/SubscribeButton'
 import cursoSobrancelhaImg from '../assets/design-sobrancelhas.jpg'
-import cursoCiliosImg from '../assets/pigmentacao-labial.png'
+import cursoCiliosImg from '../assets/cilios.jpeg'
+import preenchimentoLabialImg from '../assets/preenchimento-labial.jpeg'
 
 const Section = styled.section`
   padding: 80px 20px;
@@ -44,25 +46,40 @@ const CoursesGrid = styled.div`
 
 const CourseCard = styled.div`
   min-height: 340px;
-  background: 
-    linear-gradient(rgba(17,17,17,0.5), rgba(17,17,17,0.5)),
-    url(${props => props.$bg});
+  background: ${({ theme, $bg }) =>
+    $bg
+      ? `url(${$bg}) center/cover no-repeat, ${theme.cardBg}`
+      : theme.cardBg};
   background-size: cover;
   background-position: center;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  color: #fff;
+  color: ${({ theme }) => theme.cardText};
   padding: 40px 32px 32px 32px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.12);
   position: relative;
   overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: ${({ theme }) => theme.overlay};
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  > * {
+    position: relative;
+    z-index: 2;
+  }
 
   h3 {
     font-size: 1.7rem;
     margin-bottom: 12px;
-    color: #d4af37;
+    color: ${({ theme }) => theme.text};
   }
   p {
     font-size: 1.1rem;
@@ -113,16 +130,17 @@ const Formacao = () => (
         <CourseCard $bg={cursoSobrancelhaImg}>
           <h3>Curso de Design de Sobrancelhas</h3>
           <p>Aprenda técnicas modernas de design, simetria, henna e muito mais para transformar olhares.</p>
-          <Button href="https://wa.me/351939759571?text=Olá!%20Quero%20me%20inscrever%20no%20curso%20de%20sobrancelhas!" target="_blank" rel="noopener noreferrer">
-            Quero me inscrever
-          </Button>
+          <SubscribeButton href="https://wa.me/351939759571?text=Olá!%20Quero%20me%20inscrever%20no%20curso%20de%20sobrancelhas!"></SubscribeButton>
         </CourseCard>
         <CourseCard $bg={cursoCiliosImg}>
           <h3>Curso de Extensão de Cílios</h3>
           <p>Domine as técnicas de alongamento fio a fio, volume russo e lash lifting com prática e teoria.</p>
-          <Button href="https://wa.me/351939759571?text=Olá!%20Quero%20me%20inscrever%20no%20curso%20de%20cílios!" target="_blank" rel="noopener noreferrer">
-            Quero me inscrever
-          </Button>
+          <SubscribeButton href="https://wa.me/351939759571?text=Olá!%20Quero%20me%20inscrever%20no%20curso%20de%20cílios!"></SubscribeButton>
+        </CourseCard>
+        <CourseCard $bg={preenchimentoLabialImg}>
+          <h3>Curso de Extensão de Cílios</h3>
+          <p>Aprenda técnicas avançadas de preenchimento labial para realçar a beleza natural com segurança e precisão.</p>
+          <SubscribeButton href="https://wa.me/351939759571?text=Olá!%20Quero%20me%20inscrever%20no%20curso%20de%20preenchimento%20labial!"></SubscribeButton>
         </CourseCard>
       </CoursesGrid>
     </Container>

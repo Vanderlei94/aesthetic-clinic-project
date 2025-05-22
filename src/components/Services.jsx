@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import AppointmentButton from './buttons/AppointmentButton'
 import sobrancelhaDesignImg from '../assets/design-sobrancelhas.jpg'
-import micropigmentacaoImg from '../assets/pigmentacao-labial.png'
+import micropigmentacaoImg from '../assets/preenchimento-labial.jpeg'
 import extensaoCiliosImg from '../assets/extensao-cilios.jpg'
 
 const ServicesSection = styled.section`

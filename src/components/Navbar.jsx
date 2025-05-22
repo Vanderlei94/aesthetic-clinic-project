@@ -1,4 +1,4 @@
-import logo from '../assets/danusalogo-removebg-preview.png'
+import logo from '../assets/d-a-logo.jpeg'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Container from '../styles/Container'
