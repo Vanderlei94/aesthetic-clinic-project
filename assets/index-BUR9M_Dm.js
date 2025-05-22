@@ -345,7 +345,6 @@ Error generating stack: `+e.message+`
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   max-width: 1200px;
-  margin: 0 auto;
   width: 100%;
 
   @media (max-width: 768px) {
@@ -384,7 +383,6 @@ Error generating stack: `+e.message+`
 `,Ty=dt.h2`
   font-size: 2rem;
   margin-bottom: 32px;
-  padding: 0 20px;
 
   @media (max-width: 768px) {
     font-size: 1.3rem;
